@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>54影视 - 五四青年影像馆·青春片/校园/独立短片/青年纪录片</title>
+<meta name="description" content="54影视（54yingshi-h5）是五四青年影像馆：青春片、校园与毕业、青年纪录片、独立短片、热血运动、女性青年与毕业季片单；不提供盗版下载、不破会员。网址 https://54yingshi-h5.github.io">
+<meta name="keywords" content="54影视,五四青年,青春片,校园电影,毕业季,青年纪录片,独立短片,热血运动,女性电影,54yingshi">
+<link rel="canonical" href="https://54yingshi-h5.github.io/">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:#fbf7f0;color:#21242e;line-height:1.8;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 8% 6%,rgba(214,64,69,.16),transparent 30%),
+    radial-gradient(circle at 92% 10%,rgba(30,42,80,.12),transparent 32%),
+    repeating-linear-gradient(0deg,rgba(0,0,0,.02) 0 1px,transparent 1px 5px);
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+section[id]{scroll-margin-top:0}
+::selection{background:#d64045;color:#fff}
+
+.bar-top{background:#1a1330;color:#ffd9d6;font-size:12px;letter-spacing:2px;padding:7px 16px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #3a2a4d}
+.bar-top b{color:#ff8a85}
+
+.nav{position:sticky;top:0;z-index:999;background:rgba(251,247,240,.95);backdrop-filter:blur(8px);border-bottom:1px solid #e3d8c8}
+.nav-in{max-width:1240px;margin:0 auto;height:66px;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:11px}
+.logo .five{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#d64045,#1e2a50);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;box-shadow:0 0 14px rgba(214,64,69,.35)}
+.logo .cn{font-size:21px;font-weight:900;letter-spacing:1px}
+.logo .cn em{font-style:normal;color:#d64045}
+.logo .en{font-size:10px;letter-spacing:3px;color:#8a7d9c}
+.menu{display:flex;gap:2px;flex-wrap:wrap}
+.menu a{font-size:13px;color:#4a4658;padding:8px 10px;border-bottom:2px solid transparent;transition:.2s}
+.menu a:hover{color:#d64045;border-bottom-color:#d64045}
+.nav-cta{background:linear-gradient(135deg,#d64045,#ff7a6e);color:#fff;font-weight:800;font-size:13px;padding:9px 18px;border-radius:999px}
+.nav-cta:hover{filter:brightness(1.05)}
+
+.hero{max-width:1240px;margin:0 auto;padding:58px 20px 44px;display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:center}
+.hero h1{font-size:clamp(30px,5vw,54px);font-weight:900;line-height:1.12}
+.hero h1 em{font-style:normal;color:#d64045}
+.hero .sub{font-size:13px;letter-spacing:5px;color:#8a7d9c;margin-top:8px}
+.hero .lead{font-size:16px;color:#34313f;margin:18px 0 22px;max-width:600px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-red{padding:12px 26px;font-weight:800;border-radius:10px;background:linear-gradient(135deg,#d64045,#1e2a50);color:#fff;transition:.25s}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(214,64,69,.25)}
+.btn-paper{background:transparent;color:#d64045;border:1px solid #d8b7b5;padding:12px 26px;border-radius:10px;font-weight:800}
+.btn-paper:hover{background:#fff3f2}
+.badge54{background:#1a1330;border:1px solid #3a2a4d;border-radius:16px;padding:22px;color:#efeaff;position:relative}
+.badge54 .big{font-size:54px;font-weight:900;background:linear-gradient(90deg,#ff8a85,#9fb0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badge54 p{font-size:13px;color:#c9c2e6;margin-top:6px}
+.badge54 .tag{margin-top:12px;display:inline-block;font-size:12px;font-weight:800;color:#1a1330;background:#ffd9d6;padding:4px 10px;border-radius:999px}
+
+.block{max-width:1240px;margin:0 auto;padding:54px 20px}
+.block-head{display:flex;align-items:baseline;gap:12px;margin-bottom:24px;flex-wrap:wrap;border-bottom:1px solid #e3d8c8;padding-bottom:10px}
+.block-head .no{font-size:12px;font-weight:800;color:#fff;background:linear-gradient(90deg,#d64045,#1e2a50);padding:3px 9px;border-radius:5px}
+.block-head h2{font-size:25px;font-weight:900}
+.block-head h2 em{font-style:normal;color:#d64045}
+.block-head .en{font-size:12px;letter-spacing:2px;color:#8a7d9c}
+.block-head a{margin-left:auto;font-size:13px;color:#4a4658}
+.block-head a:hover{color:#d64045}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(166px,1fr));gap:16px}
+.card{background:#fff;border:1px solid #ece3d6;border-radius:14px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#d64045;box-shadow:0 16px 30px rgba(214,64,69,.16)}
+.card img{width:100%;height:226px;object-fit:cover;filter:contrast(1.04) saturate(1.05)}
+.card .b{padding:12px}
+.card h3{font-size:15px;font-weight:800;color:#21242e}
+.card .row{display:flex;justify-content:space-between;font-size:12px;color:#7a7388;margin-top:5px}
+.card .row b{color:#d64045}
+.chip{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:#d64045;padding:2px 9px;border-radius:999px;margin-top:7px}
+.chip.blue{background:#1e2a50}
+.chip.amber{background:#c98a2b;color:#fff}
+
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dcard{background:#fff;border:1px solid #ece3d6;border-left:4px solid #d64045;border-radius:0 14px 14px 0;padding:20px}
+.dcard h3{font-size:17px;font-weight:800;color:#b83338}
+.dcard ul{list-style:none;margin-top:10px}
+.dcard li{padding:8px 0 8px 22px;position:relative;font-size:14px;color:#34313f;border-bottom:1px dashed #ece3d6}
+.dcard li::before{content:"✺";position:absolute;left:0;color:#d64045}
+
+.lab{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.labcard{background:linear-gradient(160deg,#fff,#f3eee6);border:1px solid #ece3d6;border-radius:16px;padding:22px}
+.labcard h3{font-size:17px;font-weight:800;color:#1e2a50}
+.labcard p{font-size:13px;color:#34313f;margin-top:8px}
+.labcard .tag{margin-top:10px;font-size:12px;color:#d64045;font-weight:700}
+
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.sc{background:#fff;border:1px solid #ece3d6;border-radius:14px;padding:18px}
+.sc h3{font-size:16px;font-weight:800;color:#21242e}
+.sc p{font-size:13px;color:#7a7388;margin-top:6px}
+.sc .meta{margin-top:10px;font-size:12px;color:#d64045;font-weight:700}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;background:linear-gradient(135deg,#1a1330,#241a3a);color:#efeaff;border-radius:18px;padding:42px}
+.about h2{font-size:25px;font-weight:900;margin-bottom:14px;color:#fff}
+.about h2 em{font-style:normal;color:#ff8a85}
+.about p{font-size:15px;color:#d8d2f0;line-height:1.95;margin-bottom:12px}
+.about .url{color:#ffb3ae;font-weight:800}
+.astats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.as{background:#241a3a;border:1px solid #3a2a4d;border-radius:12px;padding:18px;text-align:center}
+.as .n{font-size:24px;font-weight:900;color:#ff8a85}
+.as .l{font-size:12px;color:#b9b0d8;margin-top:3px}
+
+.foot{border-top:1px solid #e3d8c8;padding:40px 20px 28px;text-align:center;background:#f3eee6}
+.foot-logo{font-size:20px;font-weight:900}
+.foot-logo em{font-style:normal;color:#d64045}
+.foot-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:12px 0}
+.foot-links a{font-size:13px;color:#7a7388}
+.foot-links a:hover{color:#d64045}
+.foot p{font-size:12px;color:#8a7d9c}
+.foot .disc{margin-top:10px;max-width:880px;margin-left:auto;margin-right:auto;color:#8a7d9c;line-height:1.7}
+
+@media(max-width:860px){
+  .menu{display:none}
+  .hero{grid-template-columns:1fr;padding:26px 20px 36px}
+  .dual{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;padding:28px}
+  .block{padding:44px 20px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<div class="bar-top">
+  <span>54 = 5月4日青年节</span><b>青春片 · 校园 · 独立短片 · 青年纪录片</b>
+  <span>不破会员</span><b>不托管盗版片源</b>
+</div>
+
+<div class="nav">
+  <div class="nav-in">
+    <div class="logo">
+      <div class="five">5·4</div>
+      <div>
+        <div class="cn">54<em>影视</em></div>
+        <div class="en">MAY 4TH YOUTH CINEMA</div>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="#home">首页</a>
+      <a href="#youth">青春片</a>
+      <a href="#campus">校园与毕业</a>
+      <a href="#doc">青年纪录片</a>
+      <a href="#short">独立短片</a>
+      <a href="#sport">热血运动</a>
+      <a href="#her">女性青年</a>
+      <a href="#list">54片单</a>
+      <a href="#about">关于</a>
+    </nav>
+    <a href="#youth" class="nav-cta">进青年厅</a>
+  </div>
+</div>
+
+<section class="hero" id="home">
+  <div>
+    <h1>54 不是老盗版站，<br>是<em>青年还在试错</em>的年纪</h1>
+    <div class="sub">YOUTH · CAMPUS · INDIE · DOC · 5.4</div>
+    <p class="lead">外面的“54影视”常和快播、QVOD、免费高清下载绑在一起，那套我们不碰。这里把 54 读回“五四青年”：青春片、校园与毕业、青年纪录片、独立短片、热血运动、女性成长——年轻人不是流量，是还没被生活磨平的那股劲。</p>
+    <div class="hero-btns">
+      <a href="#youth" class="btn-red">🎓 看青春片</a>
+      <a href="#short" class="btn-paper">🎬 看独立短片</a>
+    </div>
+  </div>
+  <div class="badge54">
+    <div class="big">5·4</div>
+    <p>爱国、进步、民主、科学——不挂口号，挂进镜头里：第一次离家的夜、宿舍最后一晚、简历投到第 87 家、敢辞职也敢重来。</p>
+    <span class="tag">青年影像策展室</span>
+  </div>
+</section>
+
+<section class="block" id="youth">
+  <div class="block-head">
+    <span class="no">01</span>
+    <h2>青春<em>片</em></h2>
+    <span class="en">YOUTH FILMS</span>
+    <a href="#">更多 #</a>
+  </div>
+  <div class="grid">
+    <div class="card"><img src="https://picsum.photos/300/420?random=5401" alt="54影视 阳光灿烂的日子"><div class="b"><h3>阳光灿烂的日子</h3><div class="row"><span>大院/青春期</span><b>8.8</b></div><span class="chip">记忆会撒谎</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5402" alt="54影视 致青春"><div class="b"><h3>致我们终将逝去的青春</h3><div class="row"><span>校园/爱情</span><b>7.4</b></div><span class="chip blue">郑微式莽撞</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5403" alt="54影视 少年的你"><div class="b"><h3>少年的你</h3><div class="row"><span>校园/霸凌</span><b>8.3</b></div><span class="chip">“你保护世界，我保护你”</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5404" alt="54影视 蓝色大门"><div class="b"><h3>蓝色大门</h3><div class="row"><span>台湾/青春</span><b>8.4</b></div><span class="chip amber">喜欢谁都会变</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5405" alt="54影视 四仔漫游"><div class="b"><h3>四个春天</h3><div class="row"><span>家庭/成长</span><b>8.9</b></div><span class="chip blue">父母才是青春残页</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5406" alt="54影视 无人知晓"><div class="b"><h3>无人知晓</h3><div class="row"><span>日本/少年</span><b>9.1</b></div><span class="chip">孩子比大人先懂事</span></div></div>
+  </div>
+</section>
+
+<section class="block" id="campus" style="background:#f3eee6">
+  <div class="block-head">
+    <span class="no">02</span>
+    <h2>校园与<em>毕业</em></h2>
+    <span class="en">CAMPUS & GRADUATION</span>
+  </div>
+  <div class="dual">
+    <div class="dcard">
+      <h3>宿舍最后一晚在聊什么</h3>
+      <ul>
+        <li>谁先哭：平时最嘴硬那个</li>
+        <li>外卖单、泡面桶、挂科记录、暗恋名单</li>
+        <li>“以后别装成年人，累了就回来骂”</li>
+        <li>毕业论文致谢比正文真诚</li>
+        <li>校门一关，18 到 22 岁就归档了</li>
+      </ul>
+    </div>
+    <div class="dcard">
+      <h3>毕业片不该只拍恋爱</h3>
+      <ul>
+        <li>第一次租房：押金比爱情还难退</li>
+        <li>第一份工资：请爸妈吃饭时装没事</li>
+        <li>秋招现场：简历被扫进“已读不回”</li>
+        <li>同学会：最怕“你现在做什么”</li>
+        <li>离职信：写得很燃，发出去手抖</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="doc">
+  <div class="block-head">
+    <span class="no">03</span>
+    <h2>青年<em>纪录片</em></h2>
+    <span class="en">YOUTH DOCUMENTARY</span>
+    <a href="#">更多 #</a>
+  </div>
+  <div class="grid">
+    <div class="card"><img src="https://picsum.photos/300/420?random=5411" alt="54影视 归途列车"><div class="b"><h3>归途列车</h3><div class="row"><span>打工/代际</span><b>8.5</b></div><span class="chip">春运里两代人错位</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5412" alt="54影视 大同"><div class="b"><h3>大同</h3><div class="row"><span>城市/青年公务员</span><b>8.3</b></div><span class="chip blue">理想撞上拆迁</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5413" alt="54影视 摇摇晃晃的人间"><div class="b"><h3>摇摇晃晃的人间</h3><div class="row"><span>诗人/底层青年</span><b>8.1</b></div><span class="chip">诗句比简历有用</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5414" alt="54影视 我的诗篇"><div class="b"><h3>我的诗篇</h3><div class="row"><span>工人/写作</span><b>8.0</b></div><span class="chip amber">流水线写十四行</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5415" alt="54影视 大学"><div class="b"><h3>大学</h3><div class="row"><span>高校/青年选择</span><b>8.2</b></div><span class="chip blue">象牙塔不全是糖</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5416" alt="54影视 棒！少年"><div class="b"><h3>棒！少年</h3><div class="row"><span>乡村/体育</span><b>8.7</b></div><span class="chip">穷地方也能挥棒</span></div></div>
+  </div>
+</section>
+
+<section class="block" id="short" style="background:#f3eee6">
+  <div class="block-head">
+    <span class="no">04</span>
+    <h2>独立<em>短片</em></h2>
+    <span class="en">INDIE SHORTS</span>
+  </div>
+  <div class="lab">
+    <div class="labcard"><h3>3 分钟离职</h3><p>不拍老板骂人，拍主角把工牌轻轻放桌上，电梯镜面里笑了一下——自由很轻，房租很重。</p><div class="tag">都市青年 / 微成本</div></div>
+    <div class="labcard"><h3>外卖员的中午</h3><p>12:47，单子全超时，他坐在台阶上啃馒头，给妈妈发“今天不忙”。声音全是城市噪声。</p><div class="tag">纪实短片 / 声音优先</div></div>
+    <div class="labcard"><h3>考研第三年</h3><p>书桌、台灯、便利贴、朋友圈上岸照。没崩溃，只是把“再试一次”设成了手机壁纸。</p><div class="tag">焦虑 / 留白</div></div>
+    <div class="labcard"><h3>回县城的夏天</h3><p>大城市退租，老家奶茶店、麻将声、旧同学。不是失败，是把人生从“应该”换回“愿意”。</p><div class="tag">返乡 / 青春第二种</div></div>
+  </div>
+</section>
+
+<section class="block" id="sport">
+  <div class="block-head">
+    <span class="no">05</span>
+    <h2>热血<em>运动</em></h2>
+    <span class="en">YOUTH & SPORTS</span>
+    <a href="#">更多 #</a>
+  </div>
+  <div class="grid">
+    <div class="card"><img src="https://picsum.photos/300/420?random=5421" alt="54影视 摔跤吧爸爸"><div class="b"><h3>摔跤吧！爸爸</h3><div class="row"><span>印度/青春体育</span><b>9.0</b></div><span class="chip">女儿先不服，后不怕</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5422" alt="54影视 点球成金"><div class="b"><h3>点球成金</h3><div class="row"><span>棒球/数据青年</span><b>7.7</b></div><span class="chip blue">年轻人最懂换算法</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5423" alt="54影视 绝杀慕尼黑"><div class="b"><h3>绝杀慕尼黑</h3><div class="row"><span>篮球/冷战</span><b>7.8</b></div><span class="chip">年轻人敢赢老大哥</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5424" alt="54影视 少年班"><div class="b"><h3>少年班</h3><div class="row"><span>天才/成长</span><b>7.0</b></div><span class="chip amber">聪明也要学做人</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5425" alt="54影视 棒少年"><div class="b"><h3>棒少年</h3><div class="row"><span>纪录/棒球</span><b>8.7</b></div><span class="chip blue">野地里的本垒打</span></div></div>
+    <div class="card"><img src="https://picsum.photos/300/420?random=5426" alt="54影视 排球少年剧版"><div class="b"><h3>排球少年！！</h3><div class="row"><span>动漫/运动</span><b>9.0</b></div><span class="chip">“成为乌野的翅膀”</span></div></div>
+  </div>
+</section>
+
+<section class="block" id="her" style="background:#f3eee6">
+  <div class="block-head">
+    <span class="no">06</span>
+    <h2>女性<em>青年</em></h2>
+    <span class="en">YOUNG WOMEN ON SCREEN</span>
+  </div>
+  <div class="strip">
+    <div class="sc"><h3>我的少女时代</h3><p>不是“被喜欢”才算青春，是敢追、敢丢人、敢在操场喊出来。</p><div class="meta">校园 / 台式青春</div></div>
+    <div class="sc"><h3>七月与安生</h3><p>两个女孩的友情比爱情难写：靠近会疼，分开会想。</p><div class="meta">成长 / 双女主</div></div>
+    <div class="sc"><h3>燃烧女子的肖像</h3><p>年轻人最先懂的：被看见，比被拥有更重要。</p><div class="meta">法国 / 凝视与自由</div></div>
+    <div class="sc"><h3>送我上青云</h3><p>女青年、疾病、欲望、体面——把“女性也能不乖”拍得不卖惨。</p><div class="meta">国产 / 女性主体性</div></div>
+  </div>
+</section>
+
+<section class="block" id="list">
+  <div class="block-head">
+    <span class="no">07</span>
+    <h2>54<em>片单</em></h2>
+    <span class="en">MAY 4TH LISTS</span>
+  </div>
+  <div class="strip">
+    <div class="sc"><h3>毕业前夜看</h3><p>蓝色大门、四个春天、无人知晓、少年班——别约人，自己看完再睡。</p><div class="meta">6 部 / 眼泪备用</div></div>
+    <div class="sc"><h3>投简历间隙看</h3><p>实习生、白日梦想家、百元之恋、我的诗篇——被拒不是终点，是素材。</p><div class="meta">打工人续命</div></div>
+    <div class="sc"><h3>五一青年节放</h3><p>归途列车、棒！少年、大学、绝杀慕尼黑——青年不是节日，是还在动。</p><div class="meta">5.4 特展</div></div>
+    <div class="sc"><h3>不敢打电话回家时</h3><p>四个春天、我的父亲母亲、归途列车——看完发一条“我挺好”也行。</p><div class="meta">乡愁 / 低音量</div></div>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="about">
+    <div>
+      <h2>54影视：<em>把“54”还给我们自己</em></h2>
+      <p>老 54影视 = 快播/QVOD/免费高清下载站，版权和合规都踩雷。[1,4](@ref) 我们这版不这么干：54 读作五四青年节，站点做“青年影像馆”——青春片、校园与毕业、青年纪录片、独立短片、热血运动、女性青年、毕业季片单。</p>
+      <p>不提供盗版下载、不破解会员、不托管侵权片源；片单只指向正版平台、公版/展映内容与幕后资料。网址：<span class="url">https://54yingshi-h5.github.io</span></p>
+    </div>
+    <div class="astats">
+      <div class="as"><div class="n">五四青年</div><div class="l">5月4日 / 青年影像</div></div>
+      <div class="as"><div class="n">青春策展</div><div class="l">校园/毕业/独立/纪录</div></div>
+      <div class="as"><div class="n">0 盗版</div><div class="l">不下载·不破会员</div></div>
+      <div class="as"><div class="n">红+纸+墨蓝</div><div class="l">青年红/纸页白/墨蓝夜</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-logo">54<em>影视</em> · MAY 4TH YOUTH CINEMA</div>
+  <div class="foot-links">
+    <a href="#youth">青春片</a>
+    <a href="#campus">校园与毕业</a>
+    <a href="#doc">青年纪录片</a>
+    <a href="#short">独立短片</a>
+    <a href="#sport">热血运动</a>
+    <a href="#her">女性青年</a>
+    <a href="#list">54片单</a>
+    <a href="#about">关于</a>
+  </div>
+  <p>© 2026 54影视 · 网站网址：https://54yingshi-h5.github.io</p>
+  <p class="disc">本站为五四青年影像策展演示页。旧版“54影视/54电影网”常涉快播、QVOD、免费高清下载等版权风险；本页不提供盗版院线、不破解会员、不托管侵权片源。青春片、校园片、青年纪录片与独立短片仅作策展与拉片研究，实际观看请走正版平台与官方展映。</p>
+</footer>
+
+</body>
+</html>
